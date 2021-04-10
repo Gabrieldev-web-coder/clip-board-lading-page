@@ -1,0 +1,217 @@
+$Primary-colors:hsl(171, 66%, 44%),hsl(233, 100%, 69%);
+$Neutral-colors:hsl(210, 10%, 33%),hsl(201, 11%, 66%);
+$Body-size:18px;
+$Font-family:'Bai Jamjuree', sans-serif;
+$Font-weights:400,600; 
+
+body{
+    background-image: url(/images/bg-header-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: $Body-size;
+    font-weight: nth($Font-weights,1);
+    font-family: $Font-family;
+    color: nth($Neutral-colors,2);
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+#Header__clipbord{
+    margin-bottom: 8rem;
+    .Header__clipboard-figure-img{
+        margin: 8rem 1rem 5rem 1rem;
+        .Header__clipboard-img{
+            width: 120px;
+        }
+    }
+}
+
+.Clipboard__article{
+    margin-bottom: 5rem;
+}
+
+.Article__h3{
+    color: nth($Neutral-colors,1);
+    font-weight: nth($Font-weights,2);
+    font-size: 35px;
+    line-height: 3rem;
+}
+
+.Article__h4{
+    color: nth($Neutral-colors,1);
+    font-weight: nth($Font-weights,2);
+    font-size: 30px;
+    margin-bottom: 0;
+}
+
+.Article__p{margin: 1.5rem;}
+
+.Buttoms-container{margin-top: 2rem;}
+
+.Buttom-iOS-container{
+    background-color: nth($Primary-colors,1);
+    color: white;
+    padding: 1rem;
+    margin: 1rem 2rem 1rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0px 4px 5px 0px rgba(25,127,112,1);
+    cursor: pointer;
+}
+.Buttom-Mac-container{
+    background-color: nth($Primary-colors,2);
+    color: white;
+    padding: 1rem;
+    margin: 1rem 2rem 1.5rem 2rem;
+    border-radius: 50px;
+    box-shadow: 0px 4px 5px 0px rgba(51,75,255,1);
+    cursor: pointer;
+}
+
+.Buttom-iOS-container:hover{
+    transition: .5s;
+    opacity: 80%;
+}
+
+.Buttom-Mac-container:hover{
+    transition: .5s;
+    opacity: 80%;   
+}
+
+
+
+.Clipboard__wrapper-figure-img,.Clipboard__middle-figure-img{
+    width: 100%;
+    margin: 0;
+}
+
+.Clipboard__middle-figure{
+    margin-bottom: 5rem;
+}
+
+.Clipboard__logos-section{
+    figure{
+        margin:3rem;
+    }
+}
+
+footer{
+    background-color:#F0F2F3;
+    color: nth($Neutral-colors,1);
+    padding: 1rem;
+    .Footer__clipboard-figure-img{
+        .Footer__clipboard-img{
+            width: 40px;
+        }
+    }
+    .Footer__span-zone{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        span{
+            cursor: pointer;
+            margin: .4rem;
+        }
+        span:hover{
+            transition: .5s;
+            color: nth($Primary-colors,1);
+        }
+    }
+    .Footer__icon-zone{
+        margin: 1rem 1rem 0rem 1rem;
+        i{
+            cursor: pointer;
+            margin:1rem;
+        }
+
+        i:hover{
+            transition: .5s;
+            color: nth($Primary-colors,1);
+        }
+    }
+}
+
+@media screen and (min-width:768px){
+    body{
+        background-image: url(/images/bg-header-desktop.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .Buttoms-container{
+    display: flex;
+    justify-content: center;
+    }
+
+    .Buttom-iOS-container{
+        width: 230px;
+        margin: 1rem 1rem 2rem 2rem;
+    }
+
+    .Buttom-Mac-container{
+        width: 230px;
+        margin: 1rem 1rem 2rem 0rem;
+    }
+
+    .Clipboard__article{margin-bottom: 0;}
+
+    .Clipboard__wrapper{
+        margin: 10% 0% 10% 0%;
+        text-align: left;
+        display: grid;
+        grid-template-columns:50% 50%;
+        grid-template-areas:
+        "img art1"
+        "img art2"
+        "img art3";
+
+        .Article__h4{margin: 1rem 0rem 0rem 0rem;}
+        .Article__p{margin: 6% 0% 6% 0%;}
+
+    .Clipboard__wrapper-figure{
+        grid-area:img;
+        margin: 0;
+    }
+    .Clipboard__article:nth-of-type(1){
+        grid-area: art1;
+        padding: 0% 15% 0% 15%;
+    }
+
+    .Clipboard__article:nth-of-type(3){
+        grid-area:art2;
+        padding: 0% 15% 0% 15%;
+    }
+
+    .Clipboard__article:nth-of-type(2){
+        grid-area:art3;
+        padding: 0% 15% 0% 15%;
+    }
+    }
+
+    .Clipboard__middle-figure{
+        .Clipboard__middle-figure-img{
+            width: 90%;
+            text-align: end;
+        }
+    }
+
+    .Clipboard__sections{
+        display: flex;
+        align-items: center;
+        .Clipboard__article{
+            margin: 5% 5% 5% 0%;
+            .Article__p{
+                margin: 24px 12px 12px 12px;
+            }
+        }
+    }
+
+    .Clipboard__logos-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10% 0% 10% 0%;
+    align-items: center;
+    }
+}
+
+
